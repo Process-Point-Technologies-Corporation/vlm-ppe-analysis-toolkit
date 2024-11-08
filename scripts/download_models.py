@@ -22,4 +22,4 @@ if __name__ == "__main__":
     download_model(args.model_name, args.save_directory)
 
 # Execution Guide:
-# python scripts\download_models.py ThetaCursed/Ovis1.6-Gemma2-9B-bnb-4bit models\Ovis1.6-Gemma2-9B-bnb-4bit
+# python scripts\download_models.py Qwen/Qwen2-VL-7B-Instruct models\models--Qwen--Qwen2-VL-7B-Instruct
