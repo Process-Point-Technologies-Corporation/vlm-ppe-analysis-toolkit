@@ -13,9 +13,9 @@ This repository explores the use of Vision Language Models (VLMs) for the task o
 
 ## System Environment
 - Python version: 3.10.11
-- PyTorch version: 2.1.2
+- PyTorch version: 2.1.*
 - CUDA version: 11.8
-- Transformers version: 4.36.2
+- Transformers version: 4.46.*
 
 ## Repository Structure
 The repository is organized as follows:
@@ -32,6 +32,7 @@ vlm-ppe-analysis-toolkit/
 │   ├── ppe_detection_ollama.ipynb
 │   └── ppe_detection_transformer.ipynb
 ├── scripts/
+|   ├── download_models.py
 │   ├── setup_env.sh
 │   └── setup_env.bat
 ├── README.md

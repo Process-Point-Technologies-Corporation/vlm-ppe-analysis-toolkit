@@ -5,3 +5,4 @@ pillow==10.2.0
 opencv-python==4.10.0.84
 ipython==8.29.0
 ipykernel==6.29.5
+accelerate>=0.26.0
