@@ -51,6 +51,8 @@ vlm-ppe-analysis-toolkit/
 ## Getting Started
 To get started with the VLM PPE Analysis Toolkit, follow these steps:
 
+### 1. Download the Repository & Set Up the Development Environment
+
 1. Clone the repository:
 ```
 git clone https://github.com/your-username/vlm-ppe-analysis-toolkit.git
@@ -67,7 +69,7 @@ git clone https://github.com/your-username/vlm-ppe-analysis-toolkit.git
      scripts\setup_env.bat
      ```
 
-## 2. Install OllaMa and download the VLM models
+### 2. Install OllaMa and download the VLM models
 To install Ollama please follow [Ollama Installation Guide](INSTALL_OLLAMA_GUIDE.md). Once you have Installed Ollama on your system, download LLaVa-13B and LLaMa3.2-Vision models. Run the following commands in the terminal/command prompt of your system to download the model:
 
 - Download the LLaVa-13B model:
@@ -79,8 +81,15 @@ To install Ollama please follow [Ollama Installation Guide](INSTALL_OLLAMA_GUIDE
     ollama pull llama3.2-vision
     ```
 
+### 3. Install Dependencies for the Toolkit
+In step 1 we have already installed the required dependencies. Verify the Installation Package versions with the [System Environment](#system-environment).
 
-## 3. Explore the project
+### 4. Run the Toolkit
+
+- To run the toolkit using Ollama, run [ppe-analysis-ollama.ipynb](notebooks/ppe-analysis-ollama.ipynb) notebook.Further steps are mentioned int he notebook itself.
+- To run the toolkit for Ovis1.6-Gemma2-9B model, run the [ppe-analysis-ovis16-gemma2-9b.py](src/ppe-analysis-ovis16-gemma2-9b.py). Further details are mentioned in the python file itself.
+
+## Explore the project
 
 3. Explore the Jupyter notebooks in the `notebooks/` directory to see how to use the VLM models for PPE detection.
 4. Customize the dataset, and experiment with different VLM architectures and configurations.
