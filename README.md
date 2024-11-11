@@ -23,18 +23,20 @@ The repository is organized as follows:
 ```
 vlm-ppe-analysis-toolkit/
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   └── ppe-custom-data/
 ├── models/
-│   ├── ollama/
-│   └── transformer/
 ├── notebooks/
 │   ├── ppe_detection_ollama.ipynb
 │   └── ppe_detection_transformer.ipynb
 ├── scripts/
-|   ├── download_models.py
 │   ├── setup_env.sh
 │   └── setup_env.bat
+├── src/
+|   ├── ppe-analysis-ovis16-gemma2-9b.py
+│   ├── ppe-analysis-qwen2-vl-7b.py
+│   └── visualize_result.py
+├── utils/
+│   └── download_models.py
 ├── README.md
 └── requirements.txt
 ```
@@ -45,7 +47,10 @@ vlm-ppe-analysis-toolkit/
 - `scripts/`:
   - `setup_env.sh`: Bash script for setting up the development environment on Unix-based systems.
   - `setup_env.bat`: Batch script for setting up the development environment on Windows systems.
+- `src/`: Includes python codes to run Qwen2 and Ovis 1.6 model code for analyzing the images.
+- `utils/`: Includes python scripts which can be used for other tasks, like downloading models and etc.
 - `README.md`: The project's main documentation file, which you're reading now.
+- `INSTALL_OLLAMA_GUIDE.md`: Presents the guide on how to install Ollama. 
 - `requirements.txt`: Lists the Python dependencies needed to set up the development environment.
 
 ## Getting Started
