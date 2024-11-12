@@ -102,9 +102,12 @@ if __name__ == "__main__":
     model_name = "AIDC-AI/Ovis1.6-Gemma2-9B"
     model, text_tokenizer, visual_tokenizer = load_model(model_name)
 
+    start_time = time.time()
     # Process images
     results = process_folder(image_folder, model, text_tokenizer, visual_tokenizer)  # Process all images
-    
+    end_time = time.time()
+    print(f'Processing {len(results)} images took {round((end_time - start_time), 3)} seconds.')
+
     # Generate and display HTML in notebook
     html_content = generate_html(results)
     display(HTML(html_content))
