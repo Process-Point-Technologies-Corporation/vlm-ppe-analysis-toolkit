@@ -97,6 +97,13 @@ In step 1 we have already installed the required dependencies. Verify the Instal
 
 _Note: We have not generated result for Qwen2 on all the images. We have executed it for 1 image. As the VLM is huge, it was taking lot of time to generate results._
 
+### 5. Results of Model Run
+1. Llava-7B: [Result Link]()
+2. Llava-13B: [Result Link]()
+1. Llama3.2-Vision: [Result Link]()
+2. Ovis1.6-Gemma2-9B: [Result Link]()
+
+
 ## Explore the project
 
 3. Explore the Jupyter notebooks in the `notebooks/` directory to see how to use the VLM models for PPE detection.
