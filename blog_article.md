@@ -196,7 +196,7 @@ Our analysis revealed distinct performance patterns across different VLM models:
 
 ### Performance Visualization 
 
-[Note: Here you would want to add your comparative visualization graphs showing the capabilities of different models across image complexities. The graphs could be included as additional artifacts with appropriate type tags.] 
+[Note: add comparative visualization graphs showing the capabilities of different models across image complexities.] 
 
 ### Key Insights from Evaluation 
 
