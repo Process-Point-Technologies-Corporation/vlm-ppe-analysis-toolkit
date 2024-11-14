@@ -102,7 +102,7 @@ Proceed to download the Ovis1.6-Gemma2-9B and Qwen2-VL-9B VLM models. To downloa
 - To run the toolkit using Ollama, run [ppe-analysis-ollama.ipynb](notebooks/ppe-analysis-ollama.ipynb) notebook. Further steps are mentioned int he notebook and [Ollama.md](notebooks/Ollama.md).
 - To run the toolkit for Ovis1.6-Gemma2-9B model, run the [ppe-analysis-ovis16-gemma2-9b.py](src/ppe-analysis-ovis16-gemma2-9b.py). Further details are mentioned in the python file itself.
 - To run the toolkit for Qwen2-VL-7B model, run the [ppe-analysis-qwen2-vl-7b.py](src/ppe-analysis-qwen2-vl-7b.py). Further details are mentioned in the python file itself.
-- For Ovis1.6-Gemma2-9B and Qwen2-VL-7B models, more details can be found in [transformer_hf.md](src/ppe-analysis-script-details.md)
+- For Ovis1.6-Gemma2-9B and Qwen2-VL-7B models, more details can be found in [ppe-analysis-script-details.md](src/ppe-analysis-script-details.md)
 
 _Note: We have not generated result for Qwen2 on all the images. We have executed it for 1 image. As the VLM is huge, it was taking lot of time to generate results._
 
