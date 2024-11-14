@@ -44,7 +44,7 @@ We have created a [Excel file](VLM%20result%20analysis.xlsx) which shows our ana
 - More detailed contextual descriptions 
 - Better handling of occluded or partially visible PPE
 - Low Throughput and High Accuracy Compared to GGUF Models used in OllaMa 
-- Took us **15-20 hours** for 185 images to generate result
+- Took us **900-1200 mins** for 185 images to generate result
 - [Result File](results/OVIS-VL%20Image%20Analysis%20Results.pdf)
 
 ### **Qwen2-VL-Instruct-7B**
@@ -55,11 +55,11 @@ We have created a [Excel file](VLM%20result%20analysis.xlsx) which shows our ana
 
 
 ## Confusion Matrices
-![LLaMa-3.2-Vision](LLaMa3.2-Vision%20Confusion%20Metrix.png)
-![LLaVa-7B](LLaVa-7B%20Confusion%20Metrixx.png)
-![LLaVa-13B](LLaVa-13b%20Confusion%20Metrix.png)
-![Ovis1.6-Gemma2-9B](Ovis1.6-Gemma2-9B%20Confusion%20Metrix.png)
+![LLaMa-3.2-Vision](LLaMa3.2-Vision%20Matrix.png)
+![LLaVa-7B](LLaVa-7B%20Matrix.png)
+![LLaVa-13B](LLaVa-13b%20Matrix.png)
+![Ovis1.6-Gemma2-9B](Ovis1.6-Gemma2-9B%20Matrix.png)
  
 ## Conclusion
 You also Visualize consolidated summary in the following Graph:
-![Plot Summary](Consolidated%20Graph.png)
+![Plot Summary](Consolidated%20Matrix.png)
