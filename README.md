@@ -7,7 +7,7 @@ This repository explores the use of Vision Language Models (VLMs) for the task o
 - Utilizes two main approaches for VLM-based PPE analysis:
   1. Using the OllaMa library to work with [LLaVa-13B](https://ollama.com/library/llava:13b) and [LLaMa3.2-Vision](https://ollama.com/library/llama3.2-vision) models
   2. Implementing direct Transformer-based code for [Ovis1.6-Gemma2-9B](https://huggingface.co/AIDC-AI/Ovis1.6-Gemma2-9B) and [Qwen2-VL-7B](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) models
-- Includes a custom PPE dataset consisting of images from the medical, construction, and mining domains, with a Creative Commons license
+- Includes a custom PPE dataset consisting of 185 images from the medical, construction, and mining domains, with a Creative Commons license.
 - Provides detailed instructions and scripts for setting up the development environment, training the models, and evaluating their performance
 - Offers visualization and analysis tools to help understand the model outputs and identify areas for improvement
 
@@ -24,10 +24,12 @@ The repository is organized as follows:
 vlm-ppe-analysis-toolkit/
 ├── data/
 │   └── ppe-custom-data/
+├── evaluation/
 ├── models/
 ├── notebooks/
 │   ├── ppe_detection_ollama.ipynb
 │   └── ppe_detection_transformer.ipynb
+├── results/
 ├── scripts/
 │   ├── setup_env.sh
 │   └── setup_env.bat
@@ -42,12 +44,14 @@ vlm-ppe-analysis-toolkit/
 ```
 
 - `data/`: Contains the raw and processed PPE dataset files.
+- `evaluation/`: Contains details about how Evaluation is performed and stores all the graphs and Analysis Excel sheet.
 - `models/`: Holds the implementation and checkpoints for the OllaMa and Transformer-based VLM models.
 - `notebooks/`: Includes Jupyter notebooks for running the VLM-based PPE detection experiments using the OllaMa and Transformer approaches.
+- `results/`: When Scripts are executed, the results are stored in this directory.
 - `scripts/`:
   - `setup_env.sh`: Bash script for setting up the development environment on Unix-based systems.
   - `setup_env.bat`: Batch script for setting up the development environment on Windows systems.
-- `src/`: Includes python codes to run Qwen2 and Ovis 1.6 model code for analyzing the images.
+- `src/`: Includes python codes to run Qwen2 and Ovis 1.6 model code for analyzing the images. More details on scripts can be found [here](src/ppe-analysis-script-details.md)
 - `utils/`: Includes python scripts which can be used for other tasks, like downloading models and etc.
 - `README.md`: The project's main documentation file, which you're reading now.
 - `INSTALL_OLLAMA_GUIDE.md`: Presents the guide on how to install Ollama. 
@@ -86,16 +90,30 @@ To install Ollama please follow [Ollama Installation Guide](INSTALL_OLLAMA_GUIDE
     ollama pull llama3.2-vision
     ```
 
-### 3. Install Dependencies for the Toolkit
+### 3. Install Transformer and its Dependencies along with their Model
 In step 1 we have already installed the required dependencies. Verify the Installation Package versions with the [System Environment](#system-environment).
+
+Proceed to download the Ovis1.6-Gemma2-9B and Qwen2-VL-9B VLM models. To download the models you have two options: 
+- One to directly run the analysis code, it will download the model
+- Second option is to use `download_models.py` which helps you download the model from hugging face.
 
 ### 4. Run the Toolkit
 
-- To run the toolkit using Ollama, run [ppe-analysis-ollama.ipynb](notebooks/ppe-analysis-ollama.ipynb) notebook.Further steps are mentioned int he notebook itself.
+- To run the toolkit using Ollama, run [ppe-analysis-ollama.ipynb](notebooks/ppe-analysis-ollama.ipynb) notebook. Further steps are mentioned int he notebook and [Ollama.md](notebooks/Ollama.md).
 - To run the toolkit for Ovis1.6-Gemma2-9B model, run the [ppe-analysis-ovis16-gemma2-9b.py](src/ppe-analysis-ovis16-gemma2-9b.py). Further details are mentioned in the python file itself.
 - To run the toolkit for Qwen2-VL-7B model, run the [ppe-analysis-qwen2-vl-7b.py](src/ppe-analysis-qwen2-vl-7b.py). Further details are mentioned in the python file itself.
+- For Ovis1.6-Gemma2-9B and Qwen2-VL-7B models, more details can be found in [ppe-analysis-script-details.md](src/ppe-analysis-script-details.md)
 
 _Note: We have not generated result for Qwen2 on all the images. We have executed it for 1 image. As the VLM is huge, it was taking lot of time to generate results._
+
+### 5. Results of Model Run
+1. Llava-7B: [Result Link](results/Llava_7b%20Image%20Analysis%20Results.pdf)
+2. Llava-13B: [Result Link](results/Llava%2013B%20Image%20Analysis%20Results.pdf)
+1. Llama3.2-Vision: [Result Link](results/Llama%203.2%20Vision%20Image%20Analysis%20Results.pdf)
+2. Ovis1.6-Gemma2-9B: [Result Link](results/OVIS-VL%20Image%20Analysis%20Results.pdf)
+
+### 6. Evaluation of the Models
+Complete Details on how we evaluated the results for all the VLM's we tried can be found in [evaluation.md](evaluation/evaluation.md) file.
 
 ## Explore the project
 
